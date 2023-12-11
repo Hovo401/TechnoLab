@@ -10,14 +10,16 @@ export default function SignUp({setPanelState, setUserConfig}){
 
     
     return(
-       
         <div style={style.panel} class='panel'>
             <h3>SignUp</h3>
             <input value={Login} onChange={ e=> setLogin(e.target.value) } className="forminput" type='text'></input>
-
             <h3>Password</h3>
             <input value={password} onChange={ e=> setPassword(e.target.value) } className="forminput" type='password'></input>
             <h3>Password</h3>
+            <input value={clonePassword} onChange={ e=> setClonePassword(e.target.value) } className="forminput" type='password'></input>
+            <h3>Name</h3>
+            <input value={Login} onChange={ e=> setLogin(e.target.value) } className="forminput" type='text'></input>
+            <h3>Phone number</h3>
             <input value={clonePassword} onChange={ e=> setClonePassword(e.target.value) } className="forminput" type='password'></input>
             <p>{message}</p>
             <p>{password!==clonePassword?'passwords are different':''}</p>
