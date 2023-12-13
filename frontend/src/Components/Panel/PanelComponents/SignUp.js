@@ -8,6 +8,9 @@ export default function SignUp({setPanelState, setUserConfig}){
     const [clonePassword, setClonePassword] = useState('');
     const [message, setMessage] = useState('');
 
+    const [Name, setName] = useState('');
+    const [Phone_number, setPhone_number] = useState('');
+
     
     return(
         <div style={style.panel} class='panel'>
@@ -18,9 +21,9 @@ export default function SignUp({setPanelState, setUserConfig}){
             <h3>Password</h3>
             <input value={clonePassword} onChange={ e=> setClonePassword(e.target.value) } className="forminput" type='password'></input>
             <h3>Name</h3>
-            <input value={Login} onChange={ e=> setLogin(e.target.value) } className="forminput" type='text'></input>
+            <input value={Name} onChange={ e=> setName(e.target.value) } className="forminput" type='text'></input>
             <h3>Phone number</h3>
-            <input value={clonePassword} onChange={ e=> setClonePassword(e.target.value) } className="forminput" type='password'></input>
+            <input value={Phone_number} onChange={ e=> setPhone_number(e.target.value) } className="forminput" type='text'></input>
             <p>{message}</p>
             <p>{password!==clonePassword?'passwords are different':''}</p>
             <input onClick={()=>{SignUpReq( Login, password )}} className="forminput" style={style.cursorPpointer} type='submit' value='Вход'></input>
